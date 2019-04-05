@@ -7,5 +7,9 @@ namespace Async_Inn.Models
 {
     public class Amenities
     {
+        public int ID { get; set; }
+        public string Name { get; set; }
+
+        public ICollection<RoomAmenities> RoomAmenities { get; set; }
     }
 }
