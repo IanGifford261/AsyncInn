@@ -8,7 +8,7 @@ namespace Async_Inn.Models
     public class RoomAmenities
     {
         public int AmenitiesID { get; set; }
-        public int RoomID { get; set; }
+        public int RoomsID { get; set; }
 
         public Amenities Amenities { get; set; }
         public Rooms Rooms { get; set; }
