@@ -54,7 +54,7 @@ namespace Async_Inn.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,StreetAddress,City,State,Phone")] Hotels hotels)
+        public async Task<IActionResult> Create([Bind(" ID, Name, StreetAddress, City, State, Phone")] Hotels hotels)
         {
             if (ModelState.IsValid)
             {

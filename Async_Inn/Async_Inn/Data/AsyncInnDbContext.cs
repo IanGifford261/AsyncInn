@@ -18,9 +18,9 @@ namespace Async_Inn.Data
         {
             modelBuilder.Entity<HotelRooms>().HasKey(ce => new { ce.HotelsID, ce.RoomsID });
             modelBuilder.Entity<RoomAmenities>().HasKey(ce => new { ce.RoomsID, ce.AmenitiesID });
-            modelBuilder.Entity<Hotels>().HasKey(ce => new { ce., ce. });
-            modelBuilder.Entity<Rooms>().HasKey(ce => new { ce.HotelsID, ce.RoomsID });
-            modelBuilder.Entity<Amenities>().HasKey(ce => new { ce.HotelsID, ce.RoomsID });
+            //modelBuilder.Entity<Hotels>().HasKey(ce => new { ce.ID, ce.Name, ce.StreetAddress, ce.City, ce.State, ce.Phone });
+            //modelBuilder.Entity<Rooms>().HasKey(ce => new { ce.HotelsID, ce.RoomsID });
+            //modelBuilder.Entity<Amenities>().HasKey(ce => new { ce.HotelsID, ce.RoomsID });
 
         }
 
