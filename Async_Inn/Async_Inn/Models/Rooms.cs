@@ -15,6 +15,20 @@ namespace Async_Inn.Models
         public ICollection<Amenities> Amenities { get; set; }
         public ICollection<HotelRooms> HotelRooms { get; set; }
 
-        public enum RoomLayout { SingleQueen, DoubleQueen, QueenSuite, KingSuite, KingJacuzzi, Penthouse }
+        public enum RoomLayout
+        {
+            SingleQueen,
+
+            DoubleQueen,
+
+            QueenSuite,
+
+            KingSuite,
+
+            KingJacuzzi,
+
+            Penthouse
+
+        }
     }
 }
