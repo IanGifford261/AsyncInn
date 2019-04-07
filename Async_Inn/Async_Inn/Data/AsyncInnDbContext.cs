@@ -31,31 +31,31 @@ namespace Async_Inn.Data
                 },
                 new Hotels
                 {
-                    ID = ,
-                    Name = "",
-                    StreetAddress = "",
-                    Phone = ""
+                    ID = 2,
+                    Name = "San Luis Resort",
+                    StreetAddress = "7984 Seawall Blvd",
+                    Phone = "409-887-9494"
                 },
                 new Hotels
                 {
-                    ID = ,
-                    Name = "",
-                    StreetAddress = "",
-                    Phone = ""
+                    ID = 3,
+                    Name = "Lazy Days Inn & Suites",
+                    StreetAddress = "123 Sleepy Ave",
+                    Phone = "888-999-1000"
                 },
                 new Hotels
                 {
-                    ID = ,
-                    Name = "",
-                    StreetAddress = "",
-                    Phone = ""
+                    ID = 4,
+                    Name = "Whispering Hollow B&B",
+                    StreetAddress = "456 Eerie Lane",
+                    Phone = "666-666-4242"
                 },
                 new Hotels
                 {
-                    ID = ,
-                    Name = "",
-                    StreetAddress = "",
-                    Phone = ""
+                    ID = 5,
+                    Name = "Doomsday Inn",
+                    StreetAddress = "000 End Of World Avenue",
+                    Phone = "000-000-0001"
                 });
 
 
