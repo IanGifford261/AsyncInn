@@ -16,11 +16,48 @@ namespace Async_Inn.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Composite Key Associations
             modelBuilder.Entity<HotelRooms>().HasKey(ce => new { ce.HotelsID, ce.RoomsID });
             modelBuilder.Entity<RoomAmenities>().HasKey(ce => new { ce.RoomsID, ce.AmenitiesID });
-            //modelBuilder.Entity<Hotels>().HasKey(ce => new { ce.ID, ce.Name, ce.StreetAddress, ce.City, ce.State, ce.Phone });
-            //modelBuilder.Entity<Rooms>().HasKey(ce => new { ce.HotelsID, ce.RoomsID });
-            //modelBuilder.Entity<Amenities>().HasKey(ce => new { ce.HotelsID, ce.RoomsID });
+
+            //Seeding Data
+            modelBuilder.Entity<Hotels>().HasData(
+                new Hotels
+                {
+                    ID = 1,
+                    Name = "Hotel LuluPalooza",
+                    StreetAddress = "685 W 8th St",
+                    Phone = "408-956-7777"
+                },
+                new Hotels
+                {
+                    ID = ,
+                    Name = "",
+                    StreetAddress = "",
+                    Phone = ""
+                },
+                new Hotels
+                {
+                    ID = ,
+                    Name = "",
+                    StreetAddress = "",
+                    Phone = ""
+                },
+                new Hotels
+                {
+                    ID = ,
+                    Name = "",
+                    StreetAddress = "",
+                    Phone = ""
+                },
+                new Hotels
+                {
+                    ID = ,
+                    Name = "",
+                    StreetAddress = "",
+                    Phone = ""
+                });
+
 
         }
 
