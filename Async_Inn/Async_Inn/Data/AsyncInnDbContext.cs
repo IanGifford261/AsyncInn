@@ -27,36 +27,47 @@ namespace Async_Inn.Data
                     ID = 1,
                     Name = "Hotel LuluPalooza",
                     StreetAddress = "685 W 8th St",
-                    Phone = "408-956-7777"
+                    City = "LuLu",
+                    State = "Washington",
+                    Phone = "408-956-7777",
                 },
                 new Hotels
                 {
                     ID = 2,
                     Name = "San Luis Resort",
                     StreetAddress = "7984 Seawall Blvd",
-                    Phone = "409-887-9494"
+                    City = "Galveston",
+                    State = "Texas",
+                    Phone = "409-887-9494",
                 },
                 new Hotels
                 {
                     ID = 3,
                     Name = "Lazy Days Inn & Suites",
                     StreetAddress = "123 Sleepy Ave",
-                    Phone = "888-999-1000"
+                    City = "Lazyville",
+                    State = "Sleepington",
+                    Phone = "888-999-1000",
                 },
                 new Hotels
                 {
                     ID = 4,
                     Name = "Whispering Hollow B&B",
                     StreetAddress = "456 Eerie Lane",
-                    Phone = "666-666-4242"
+                    City = "Sleepy Hollow",
+                    State = "Myth",
+                    Phone = "666-666-4242",
                 },
                 new Hotels
                 {
                     ID = 5,
                     Name = "Doomsday Inn",
                     StreetAddress = "000 End Of World Avenue",
-                    Phone = "000-000-0001"
+                    City = "Yellowstone",
+                    State = "Wyoming",
+                    Phone = "000-000-0001",
                 });
+            modelBuilder.Entity<Rooms>
 
 
         }
