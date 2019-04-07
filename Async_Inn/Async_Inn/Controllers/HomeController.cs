@@ -14,5 +14,11 @@ namespace Async_Inn.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Hotels()
+        {
+            return RedirectToAction("Hotels", "Index");
+        }
     }
 }
