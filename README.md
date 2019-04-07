@@ -29,16 +29,16 @@ Then select and open ```Program.cs```
 
 ## Visuals
 
-##### Application Screenshots
-![Image 1]()
+##### ERD
+![Image 1](https://github.com/IanGifford261/AsyncInn/blob/master/Async_Inn/Async_Inn/Assets/AsyncInn.png)
 
 ------------------------------
 
 ## Change Log
-1.0: *Building out* -   April 2019
+1.0: *Building out* - 06 April 2019
 
 
 
 ------------------------------
 #### Credit to Collabs ####
-Jason Burns, Daniel Logerstedt, Shannon Tully.
+Jason Burns
