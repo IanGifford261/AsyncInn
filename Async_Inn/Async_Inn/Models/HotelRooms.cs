@@ -14,6 +14,6 @@ namespace Async_Inn.Models
         public bool PetFriendly { get; set; }
 
         public Hotels Hotels { get; set; }
-        public Rooms Rooms { get; set; }
+        public Rooms Rooms { get; set; }        
     }
 }

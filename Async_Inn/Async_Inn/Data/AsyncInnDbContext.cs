@@ -67,7 +67,43 @@ namespace Async_Inn.Data
                     State = "Wyoming",
                     Phone = "000-000-0001",
                 });
-            modelBuilder.Entity<Rooms>
+            modelBuilder.Entity<Rooms>().HasData(
+                new Rooms
+                {
+                    ID = 1,
+                    Name = "Single Queen",
+                    Layout = Models.Rooms.RoomLayout.SingleQueen,
+                },
+                new Rooms
+                {
+                    ID = 2,
+                    Name = "Double Queen",
+                    Layout = Models.Rooms.RoomLayout.DoubleQueen,
+                },
+                new Rooms
+                {
+                    ID = 3,
+                    Name = "Queen Suite",
+                    Layout = Models.Rooms.RoomLayout.QueenSuite,
+                },
+                new Rooms
+                {
+                    ID = 4,
+                    Name = "King Suite",
+                    Layout = Models.Rooms.RoomLayout.KingSuite,
+                },
+                new Rooms
+                {
+                    ID = 5,
+                    Name = "King Jaccuzi",
+                    Layout = Models.Rooms.RoomLayout.KingJacuzzi,
+                },
+                new Rooms
+                {
+                    ID = 6,
+                    Name = "Penthouse",
+                    Layout = Models.Rooms.RoomLayout.Penthouse,
+                });
 
 
         }
