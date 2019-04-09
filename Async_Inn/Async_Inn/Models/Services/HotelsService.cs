@@ -16,10 +16,17 @@ namespace Async_Inn.Models.Services
         {
             _context = context;
         }
+
         public async Task Create(Hotels hotel)
         {
             _context.Hotels.Add(hotel);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<List<Hotels>> GetHotels()
+        {
+            return await _context.Hotels.ToListAsync();
+        }
+
     }
 }
