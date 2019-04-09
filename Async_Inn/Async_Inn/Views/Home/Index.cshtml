@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Index";
 }
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,7 +10,34 @@
     <link rel="stylesheet" href="~/style/StyleSheet.css" />
 </head>
 <body>
-    <h1>Hello World! </h1>
+    <h1> ASYNC INN HOTEL MANAGEMENT </h1>
+    <p>Welcome.</p>
+
+    @* Used this code from Microsoft docs link: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/layout?view=aspnetcore-2.1 *@
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar">@Html.ActionLink("Hotels Directory", "Index", "Hotels")</span>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar">@Html.ActionLink("Rooms", "Index", "Rooms")</span>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar">@Html.ActionLink("Amenities", "Index", "Amenities")</span>
+                </button>
+            </div>
+            <br /><br /><br /><br /><br /><br /><br /><br />
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-page="/Index">Home</a></li>
+                    <li><a asp-page="/About">About</a></li>
+                    <li><a asp-page="/Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 </body>
 </html>
 

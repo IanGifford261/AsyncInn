@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace Async_Inn.Models
 {
+    /// <summary>
+    /// joining table for Hotels and their respective rooms
+    /// </summary>
     public class HotelRooms
     {
         public int HotelsID { get; set; }
