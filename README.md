@@ -44,3 +44,7 @@ When ready to run the application from ```Visual Studio Community``` Select ```I
 ------------------------------
 #### Credit to Collabs ####
 Jason Burns
+
+#### Resources
+For the HTML nav bar buttons
+``` @* Used this code from Microsoft docs link: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/layout?view=aspnetcore-2.1 *@```
