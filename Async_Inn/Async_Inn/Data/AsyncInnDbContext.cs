@@ -13,7 +13,10 @@ namespace Async_Inn.Data
         {
 
         }
-
+        /// <summary>
+        /// Method to hold composite keys and seed data
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Composite Key Associations

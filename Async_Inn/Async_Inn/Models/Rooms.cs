@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace Async_Inn.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Rooms
     {
         public int ID { get; set; }
