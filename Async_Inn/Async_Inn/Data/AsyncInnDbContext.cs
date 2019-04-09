@@ -107,8 +107,34 @@ namespace Async_Inn.Data
             modelBuilder.Entity<Amenities>().HasData(
                 new Amenities
                 {
-
+                    ID = 1,
+                    Name = "Balcony",
                 },
+                new Amenities
+                {
+                    ID = 2,
+                    Name = "Mini Fridge",
+                },
+                new Amenities
+                {
+                    ID = 3,
+                    Name = "Mini Bar",
+                },
+                new Amenities
+                {
+                    ID = 4,
+                    Name = "Room Service",
+                },
+                new Amenities
+                {
+                    ID = 5,
+                    Name = "Wifi",
+                },
+                new Amenities
+                {
+                    ID = 6,
+                    Name = "TV",
+                });
 
 
         }
