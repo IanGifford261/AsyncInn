@@ -31,9 +31,13 @@ When ready to run the application from ```Visual Studio Community``` Select ```I
 
 ## Visuals
 
-##### ERD
-![Image 1](https://github.com/IanGifford261/AsyncInn/blob/master/Async_Inn/Async_Inn/Assets/AsyncInn.png)
+##### ERD (Digital Example Flow)
 
+![DigiERD](https://github.com/IanGifford261/AsyncInn/blob/master/Async_Inn/Async_Inn/Assets/AsyncInn.png)
+
+##### ERD Whiteboard
+
+![Whiteboard](https://github.com/IanGifford261/Data-Structures-And-Algorithms/blob/master/Assets/DBdanjasonian.jpg)
 ------------------------------
 
 ## Change Log
