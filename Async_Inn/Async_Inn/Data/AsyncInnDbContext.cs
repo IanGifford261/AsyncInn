@@ -104,6 +104,11 @@ namespace Async_Inn.Data
                     Name = "Penthouse",
                     Layout = Models.Rooms.RoomLayout.Penthouse,
                 });
+            modelBuilder.Entity<Amenities>().HasData(
+                new Amenities
+                {
+
+                },
 
 
         }

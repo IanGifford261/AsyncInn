@@ -27,8 +27,7 @@ namespace Async_Inn.Models
 
             KingJacuzzi,
 
-            Penthouse
-
+            Penthouse,
         }
     }
 }
