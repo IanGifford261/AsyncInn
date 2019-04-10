@@ -22,5 +22,10 @@ namespace Async_Inn.Models.Services
             _context.Rooms.Add(room);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<List<Rooms>> GetRoomList()
+        {
+            return await _context.Rooms.ToListAsync();
+        }
     }
 }
