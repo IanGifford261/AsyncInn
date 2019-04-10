@@ -27,5 +27,15 @@ namespace Async_Inn.Models.Services
         {
             return await _context.Amenities.ToListAsync();
         }
+
+        public async Task<Amenities> GetAmenities(int id)
+        {
+            var amenities = await _context.Amenities.FindAsync(id);
+            if (amenities == null)
+            {
+                return null;
+            }
+            return amenities;
+        }
     }
 }
