@@ -27,5 +27,35 @@ namespace Async_Inn.Models.Services
         {
             return await _context.Rooms.ToListAsync();
         }
+
+        public async Task<Rooms> GetRooms(int id)
+        {
+            var room = await _context.Rooms.FindAsync(id);
+            if (room == null)
+            {
+                return null;
+            }
+            return room;
+        }
+
+        public void UpdateRooms(int id, Rooms room)
+        {
+            if (room.ID == id)
+            {
+                _context.Rooms.Update(room);
+                _context.SaveChanges();
+            }
+        }
+
+        public bool DeleteRooms(int id)
+        {
+            var rooms = _context.Rooms.Where(i => i.ID == id);
+            if (rooms != null)
+            {
+                _context.Remove(rooms);
+                _context.SaveChanges();
+            }
+            return true;
+        }
     }
 }
