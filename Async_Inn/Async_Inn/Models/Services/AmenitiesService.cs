@@ -22,5 +22,10 @@ namespace Async_Inn.Models.Services
             _context.Amenities.Add(amenities);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<List<Amenities>> GetAmenitiesList()
+        {
+            return await _context.Amenities.ToListAsync();
+        }
     }
 }
