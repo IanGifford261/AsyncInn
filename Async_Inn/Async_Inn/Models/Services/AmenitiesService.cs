@@ -46,5 +46,16 @@ namespace Async_Inn.Models.Services
                 _context.SaveChanges();
             }
         }
+
+        public bool DeleteAmenities(int id)
+        {
+            var amenities = _context.Amenities.Where(i => i.ID == id);
+            if (amenities != null)
+            {
+                _context.Remove(amenities);
+                _context.SaveChanges();
+            }
+            return true;
+        }
     }
 }
