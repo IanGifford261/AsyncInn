@@ -37,5 +37,14 @@ namespace Async_Inn.Models.Services
             }
             return amenities;
         }
+
+        public void UpdateAmenities(int id, Amenities amenities)
+        {
+            if (amenities.ID == id)
+            {
+                _context.Amenities.Update(amenities);
+                _context.SaveChanges();
+            }
+        }
     }
 }
