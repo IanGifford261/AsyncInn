@@ -38,6 +38,15 @@ namespace Async_Inn.Models.Services
             return hotels;
         }
 
+        public void UpdateHotels(int id, Hotels hotels)
+        {
+            if (hotels.ID == id)
+            {
+                _context.Hotels.Update(hotels);
+                _context.SaveChanges();
+            }
+        }
+
         public bool DeleteHotels(int id)
         {
             var hotels = _context.Hotels.Where(i => i.ID == id);
@@ -49,13 +58,6 @@ namespace Async_Inn.Models.Services
             return true;
         }
         
-        public void UpdateHotels(int id, Hotels hotels)
-        {
-            if (hotels.ID == id)
-            {
-                _context.Hotels.Update(hotels);
-                _context.SaveChanges();
-            }
-        }
+        
     }
 }
