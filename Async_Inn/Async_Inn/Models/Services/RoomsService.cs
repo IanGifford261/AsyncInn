@@ -16,5 +16,11 @@ namespace Async_Inn.Models.Services
         {
             _context = context;
         }
+
+        public async Task Create(Rooms room)
+        {
+            _context.Rooms.Add(room);
+            await _context.SaveChangesAsync();
+        }
     }
 }
