@@ -10,7 +10,7 @@ namespace Async_Inn.Models.Services
 {
     public class RoomsService : IRoomsManager
     {
-        private AsyncInnDbContext _context;
+        private readonly AsyncInnDbContext _context;
 
         public RoomsService(AsyncInnDbContext context)
         {
@@ -28,7 +28,7 @@ namespace Async_Inn.Models.Services
             return await _context.Rooms.ToListAsync();
         }
 
-        public async Task<Rooms> GetRooms(int id)
+        public async Task<Rooms> GetRoom(int id)
         {
             var room = await _context.Rooms.FindAsync(id);
             if (room == null)
@@ -56,6 +56,15 @@ namespace Async_Inn.Models.Services
                 _context.SaveChanges();
             }
             return true;
+        }
+
+        public async Task<Rooms> GetRoom(int id)
+        {
+            Rooms room = await _context.Rooms
+                                       .Include(a => a.Amenities)
+                                       .FirstOrDefaultAsync(i => i.ID == id);
+
+            return room;
         }
     }
 }

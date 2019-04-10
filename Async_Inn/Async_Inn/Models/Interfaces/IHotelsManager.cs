@@ -13,5 +13,10 @@ namespace Async_Inn.Interfaces
     {
         Task Create(Hotels hotel);
 
+        Task<IEnumerable<Hotels>> GetHotelList();
+
+        Task<Hotels> GetHotel();
+
+        Task
     }
 }

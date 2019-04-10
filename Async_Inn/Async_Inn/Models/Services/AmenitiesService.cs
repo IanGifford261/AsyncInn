@@ -10,7 +10,7 @@ namespace Async_Inn.Models.Services
 {
     public class AmenitiesService : IAmenitiesManager
     {
-        private AsyncInnDbContext _context;
+        private readonly AsyncInnDbContext _context;
 
         public AmenitiesService(AsyncInnDbContext context)
         {
@@ -28,14 +28,14 @@ namespace Async_Inn.Models.Services
             return await _context.Amenities.ToListAsync();
         }
 
-        public async Task<Amenities> GetAmenities(int id)
+        public async Task<Amenities> GetAmenity(int id)
         {
-            var amenities = await _context.Amenities.FindAsync(id);
-            if (amenities == null)
+            var amenity = await _context.Amenities.FindAsync(id);
+            if (amenity == null)
             {
                 return null;
             }
-            return amenities;
+            return amenity;
         }
 
         public void UpdateAmenities(int id, Amenities amenities)
@@ -56,6 +56,6 @@ namespace Async_Inn.Models.Services
                 _context.SaveChanges();
             }
             return true;
-        }
+        }        
     }
 }

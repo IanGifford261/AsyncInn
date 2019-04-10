@@ -10,7 +10,7 @@ namespace Async_Inn.Models.Services
 {
     public class HotelsService : IHotelsManager
     {
-        private AsyncInnDbContext _context;
+        private readonly AsyncInnDbContext _context;
 
         public HotelsService(AsyncInnDbContext context)
         {
@@ -22,42 +22,52 @@ namespace Async_Inn.Models.Services
             _context.Hotels.Add(hotel);
             await _context.SaveChangesAsync();
         }
-
+        
         public async Task<List<Hotels>> GetHotelList()
         {
             return await _context.Hotels.ToListAsync();
         }
 
-        public async Task<Hotels> GetHotels(int id)
+        public async Task<Hotels> GetHotel(int id)
         {
-            var hotels = await _context.Hotels.FindAsync(id);
-            if (hotels == null)
+            var hotel = await _context.Hotels.FindAsync(id);
+            if (hotel == null)
             {
                 return null;
             }
-            return hotels;
+            return hotel;
         }
 
-        public void UpdateHotels(int id, Hotels hotels)
+        public async Task UpdateHotels(int id, Hotels hotels)
         {
             if (hotels.ID == id)
             {
                 _context.Hotels.Update(hotels);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
 
-        public bool DeleteHotels(int id)
+        public async Task DeleteHotels(int id)
         {
             var hotels = _context.Hotels.Where(i => i.ID == id);
             if (hotels != null)
             {
                 _context.Remove(hotels);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
-            return true;
         }
-        
-        
+
+        //public async Task<Hotels> GetHotel(int id)
+        //{
+        //    Hotels hotel = await _context.Hotels
+        //                               .Include(a => a.HotelRooms)
+        //                               .FirstOrDefaultAsync(i => i.ID == id);
+        //    return hotel;
+        //}
+
+        private bool HotelsExists(int id)
+        {
+            return _context.Hotels.Any(e => e.ID == id);
+        }
     }
 }
