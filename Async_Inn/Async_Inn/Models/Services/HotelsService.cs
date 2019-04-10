@@ -37,5 +37,25 @@ namespace Async_Inn.Models.Services
             }
             return hotels;
         }
+
+        public bool DeleteHotels(int id)
+        {
+            var hotels = _context.Hotels.Where(i => i.ID == id);
+            if (hotels != null)
+            {
+                _context.Remove(hotels);
+                _context.SaveChanges();
+            }
+            return true;
+        }
+        
+        public void UpdateHotels(int id, Hotels hotels)
+        {
+            if (hotels.ID == id)
+            {
+                _context.Hotels.Update(hotels);
+                _context.SaveChanges();
+            }
+        }
     }
 }
