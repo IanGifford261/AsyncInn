@@ -10,6 +10,11 @@ namespace Async_Inn.Models.Services
 {
     public class RoomsService : IRoomsManager
     {
+        private AsyncInnDbContext _context;
 
+        public RoomsService(AsyncInnDbContext context)
+        {
+            _context = context;
+        }
     }
 }
