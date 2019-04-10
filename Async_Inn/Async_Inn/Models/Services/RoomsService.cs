@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Async_Inn.Models.Services
 {
-    public class RoomsService
+    public class RoomsService : IRoomsManager
     {
+
     }
 }
