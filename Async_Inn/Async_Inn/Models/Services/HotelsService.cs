@@ -23,10 +23,19 @@ namespace Async_Inn.Models.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<Hotels>> GetHotels()
+        public async Task<List<Hotels>> GetHotelList()
         {
             return await _context.Hotels.ToListAsync();
         }
 
+        public async Task<Hotels> GetHotels(int id)
+        {
+            var hotels = await _context.Hotels.FindAsync(id);
+            if (hotels == null)
+            {
+                return null;
+            }
+            return hotels;
+        }
     }
 }
