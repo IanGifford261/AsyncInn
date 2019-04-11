@@ -57,6 +57,21 @@ namespace Async_Inn.Models.Services
             }
         }
 
+        public async Task<List<Rooms>> GetRoomsList()
+        {
+            return await _context.Rooms.ToListAsync();
+        }
+
+        public async Task<Rooms> GetRoom(int id)
+        {
+            var room = await _context.Rooms.FindAsync(id);
+            if (room == null)
+            {
+                return null;
+            }
+            return room;
+        }
+
         //public async Task<Hotels> GetHotel(int id)
         //{
         //    Hotels hotel = await _context.Hotels
@@ -65,7 +80,7 @@ namespace Async_Inn.Models.Services
         //    return hotel;
         //}
 
-        private bool HotelsExists(int id)
+        public bool HotelsExists(int id)
         {
             return _context.Hotels.Any(e => e.ID == id);
         }
