@@ -11,6 +11,14 @@ namespace Async_Inn.Interfaces
 {
     public interface IAmenitiesManager
     {
+        Task Create(Amenities amenities);
 
+        Task<List<Amenities>> GetAmenitiesList();
+
+        Task<Amenities> GetAmenity(int id);
+
+        Task UpdateAmenities(int id, Amenities amenities);
+
+        Task DeleteAmenities(int id);
     }
 }

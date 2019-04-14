@@ -38,24 +38,23 @@ namespace Async_Inn.Models.Services
             return amenity;
         }
 
-        public void UpdateAmenities(int id, Amenities amenities)
+        public async Task UpdateAmenities(int id, Amenities amenities)
         {
             if (amenities.ID == id)
             {
                 _context.Amenities.Update(amenities);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
 
-        public bool DeleteAmenities(int id)
+        public async Task DeleteAmenities(int id)
         {
             var amenities = _context.Amenities.Where(i => i.ID == id);
             if (amenities != null)
             {
                 _context.Remove(amenities);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
-            return true;
         }        
     }
 }
