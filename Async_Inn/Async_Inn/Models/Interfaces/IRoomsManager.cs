@@ -11,6 +11,17 @@ namespace Async_Inn.Interfaces
 {
     public interface IRoomsManager
     {
+        Task Create(Rooms room);
+
+        Task<List<Rooms>> GetRoomList();
+
+        Task<Rooms> GetRoom(int id);
+
+        Task UpdateRooms(int id, Rooms room);
+
+        Task DeleteRooms(int id);
+
+        Task<Rooms> GetRoomAmenities(int id);
 
     }
 }

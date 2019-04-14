@@ -70,15 +70,7 @@ namespace Async_Inn.Models.Services
                 return null;
             }
             return room;
-        }
-
-        //public async Task<Hotels> GetHotel(int id)
-        //{
-        //    Hotels hotel = await _context.Hotels
-        //                               .Include(a => a.HotelRooms)
-        //                               .FirstOrDefaultAsync(i => i.ID == id);
-        //    return hotel;
-        //}
+        }      
 
         public bool HotelsExists(int id)
         {
