@@ -15,10 +15,15 @@ namespace Async_Inn
     public class Startup
     {
         public IConfiguration Configuration { get; }
+        
+        public IHostingEnvironment Environment { get; }
 
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            Environment = Environment;
+            var builder = new ConfigurationBuilder().AddEnvironmentVariables();
+            builder.AddUserSecrets<Startup>();
+            Configuration = builder.Build();
         }
 
         public void ConfigureServices(IServiceCollection services)
