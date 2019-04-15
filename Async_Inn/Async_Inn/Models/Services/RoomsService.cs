@@ -38,27 +38,26 @@ namespace Async_Inn.Models.Services
             return room;
         }
 
-        public void UpdateRooms(int id, Rooms room)
+        public async Task UpdateRooms(int id, Rooms room)
         {
             if (room.ID == id)
             {
                 _context.Rooms.Update(room);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
 
-        public bool DeleteRooms(int id)
+        public async Task DeleteRooms(int id)
         {
             var rooms = _context.Rooms.Where(i => i.ID == id);
             if (rooms != null)
             {
                 _context.Remove(rooms);
-                _context.SaveChanges();
+               await _context.SaveChangesAsync();
             }
-            return true;
         }
 
-        public async Task<Rooms> GetRoom(int id)
+        public async Task<Rooms> GetRoomAmenities(int id)
         {
             Rooms room = await _context.Rooms
                                        .Include(a => a.Amenities)

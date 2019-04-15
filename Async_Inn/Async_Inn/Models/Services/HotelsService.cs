@@ -57,15 +57,22 @@ namespace Async_Inn.Models.Services
             }
         }
 
-        //public async Task<Hotels> GetHotel(int id)
-        //{
-        //    Hotels hotel = await _context.Hotels
-        //                               .Include(a => a.HotelRooms)
-        //                               .FirstOrDefaultAsync(i => i.ID == id);
-        //    return hotel;
-        //}
+        public async Task<List<Rooms>> GetRoomsList()
+        {
+            return await _context.Rooms.ToListAsync();
+        }
 
-        private bool HotelsExists(int id)
+        public async Task<Rooms> GetRoom(int id)
+        {
+            var room = await _context.Rooms.FindAsync(id);
+            if (room == null)
+            {
+                return null;
+            }
+            return room;
+        }      
+
+        public bool HotelsExists(int id)
         {
             return _context.Hotels.Any(e => e.ID == id);
         }
