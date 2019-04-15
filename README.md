@@ -46,6 +46,7 @@ When ready to run the application from ```Visual Studio Community``` Select ```I
 - 1.0: *Building out* - 06 April 2019
 - 1.1: *First branch functionality achieved* 04 APR 2019
 - 1.2: *Second branch functionality achieved* 04 APR 2019
+- 2.0 *Deployment yet incomplete* 14 APR 2019
 
 
 
